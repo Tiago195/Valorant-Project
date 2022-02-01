@@ -54,12 +54,11 @@ export default class Modal extends Component {
           className='container__video'>
           <video
             key={ Breach[indexState] }
-            controls
             autoPlay
             muted
             loop
             poster="true"
-            width="500px"
+            className='video'
           >
             <source src={ Breach[indexState] } type="video/mp4" />
           </video>

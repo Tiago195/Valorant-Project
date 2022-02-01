@@ -1,11 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .modal__container {
   display: flex;
   background-color: aqua;
+  width: 60vw;
+  height: 51.7vh;
+  margin: 0 auto;
+  padding: 30px;
 }
 .conatainer__info-abilits {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: blue;
+  width: 30%;
 }
 
 .info-abilits__name-type {
@@ -17,7 +29,7 @@
 }
 
 .info-abilits__name-type--img {
-  width: 4vw;
+  width: 5vw;
 }
 
 .info-abilits__name-type--img img {
@@ -47,4 +59,13 @@
 
 .info-abilits__describe-abilits--paragraph {
   background-color: red;
+}
+
+.video {
+  width: 100%;
+}
+
+.container__video {
+  flex: 1;
+  background-color: black;
 }
