@@ -2,15 +2,18 @@
   margin: 40px auto 0;
   display: flex;
   background-color: #2f2e33;
-  min-width: 50vw;
-  width: 80vw;
+  /* min-width: 50vw; */
+  /* max-width: 51vw; */
+  /* max-width: 600px; */
+  width: fit-content;
   height: 70vh;
+  position: relative;
 }
 
 .personagem-info {
   padding: 10px 20px;
   display: flex;
   flex: 1;
-  /* width: 100%; */
+  max-width: 700px;
   /* background-color: white; */
 }

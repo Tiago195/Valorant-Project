@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/index';
 import CharactersList from '../../components/CharactersList/index';
-import { displayNome } from '../../services/data/AgentsImage';
+import CharactersInfo from '../../components/CharactersInfo/index';
 import { requestCharacters } from '../../services/data/fetch';
 import './index.css';
 import '../../services/data/colors.css'
@@ -45,22 +45,14 @@ export default class index extends Component {
         <Header pageAtual='inicio' />
         <main className='main'>
           <CharactersList
-            data={ data }
-            callback={ this.handleClick }
+            data={data}
+            callback={this.handleClick}
           />
-          <section className={ ` personagem-info ${personagemInfo.developerName}` }>
-            <section
-              className={ personagemInfo.developerName }
-              style={ { display: 'flex', overflow: 'hidden' } }
-            >
-              <img src={ personagemInfo.background } alt=""
-                style={ { transform: 'scale(1.4)' } }
-              />
-              <img src={ displayNome[personagemInfo.displayName] } alt=""
-                style={ { transform: 'translateX(-150px)' } }
-              />
+          {personagemInfo.displayName && (
+            <section className={` personagem-info ${personagemInfo.developerName}`}>
+              <CharactersInfo personagemInfo={personagemInfo} />
             </section>
-          </section>
+          )}
         </main>
       </>
     )
