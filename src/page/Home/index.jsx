@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/index';
 import CharactersList from '../../components/CharactersList/index';
 import { displayNome } from '../../services/data/AgentsImage';
-import fetch from '../../services/data/fetch';
+import { requestCharacters } from '../../services/data/fetch';
 import './index.css';
 
 export default class index extends Component {
@@ -22,7 +22,7 @@ export default class index extends Component {
   }
 
   async getCharacters() {
-    const { data } = await fetch()
+    const { data } = await requestCharacters()
     this.setState({data: data.filter(e => e.displayName !== 'Neon')}, () => {
       const { data } = this.state;
       this.setState({personagemInfo: data[0]})
