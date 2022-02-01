@@ -3,7 +3,6 @@ import Header from '../../components/Header/index';
 import CharactersList from '../../components/CharactersList/index';
 import { displayNome } from '../../services/data/AgentsImage';
 import fetch from '../../services/data/fetch';
-
 import './index.css';
 
 export default class index extends Component {
