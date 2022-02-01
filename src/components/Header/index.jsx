@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './index.css';
 
 export default class index extends Component {
@@ -15,8 +15,8 @@ export default class index extends Component {
         />
         <nav>
           <ul>
-            <li><Link to="/" className={`link ${pageAtual === 'inicio' ? 'select' : ''}`} >Inicio</Link></li>
-            <li><Link to="/armas" className={`link ${pageAtual === 'armas' ? 'select' : ''}`}>Armas</Link></li>
+            <li><Link to="/" className={ `link ${pageAtual === 'inicio' ? 'select' : ''}` } >Inicio</Link></li>
+            <li><Link to="/armas" className={ `link ${pageAtual === 'armas' ? 'select' : ''}` }>Armas</Link></li>
             <li><Link to="/sobre" className='link'>Sobre nos</Link></li>
           </ul>
         </nav>
