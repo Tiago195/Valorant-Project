@@ -5,7 +5,6 @@ import './index.css';
 export default class index extends Component {
   render() {
     const { pageAtual } = this.props
-    console.log(this.props)
     return (
       <header >
         <img

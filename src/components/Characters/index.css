@@ -1,0 +1,9 @@
+.personagem {
+  /* height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* filter: grayscale(1); */
+  height: 64px;
+  transform: scaleY(.95);
+}
