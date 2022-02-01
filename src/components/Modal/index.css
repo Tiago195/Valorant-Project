@@ -1,0 +1,50 @@
+.modal__container {
+  display: flex;
+  background-color: aqua;
+}
+.conatainer__info-abilits {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.info-abilits__name-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1vw;
+  background-color: hotpink;
+}
+
+.info-abilits__name-type--img {
+  width: 4vw;
+}
+
+.info-abilits__name-type--img img {
+  width: 100%;
+}
+
+.info-abilits__img-abilits {
+  display: flex;
+  background-color: teal;
+  margin-top: 10px;
+  justify-content: space-evenly;
+}
+
+.info-abilits__img-abilits--img1,
+.info-abilits__img-abilits--img2,
+.info-abilits__img-abilits--img3,
+.info-abilits__img-abilits--img4 {
+  width: 5vw;
+}
+
+.info-abilits__img-abilits--img1 img,
+.info-abilits__img-abilits--img2 img,
+.info-abilits__img-abilits--img3 img,
+.info-abilits__img-abilits--img4 img {
+  width: 100%;
+}
+
+.info-abilits__describe-abilits--paragraph {
+  background-color: red;
+}
