@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/index';
-import fetch from '../../services/data/fetch'
 import './index.css';
 
 export default class index extends Component {
