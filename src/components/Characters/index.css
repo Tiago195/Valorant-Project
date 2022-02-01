@@ -5,5 +5,18 @@
   align-items: center; */
   /* filter: grayscale(1); */
   height: 64px;
-  transform: scaleY(.95);
+  transform: scaleY(0.95);
+  cursor: pointer;
+}
+
+.personagem::-ms-check {
+  opacity: 1;
+}
+
+.toggleON {
+  filter: grayscale(0);
+}
+
+.toggleOFF {
+  filter: grayscale(1);
 }

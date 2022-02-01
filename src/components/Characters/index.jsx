@@ -4,12 +4,17 @@ import './index.css';
 
 export default class index extends Component {
   render() {
-    const { icon, name, callback } = this.props;
+    const { icon, name, callback, id, toggle, toggleClick } = this.props;
     return (
-      <li className={`personagem ${name}`}
-        onClick={ (event) => callback(event) }
+      <li
+        className={ `personagem ${name} ${toggle ? 'toggleON' : 'toggleOFF'}` }
+        id={ id }
+        onClick={ (event) => {
+          callback(event)
+          toggleClick(event)
+        } }
       >
-        <img src={icon} alt={name} />
+        <img src={ icon } alt={ name } />
       </li>
     );
   }
