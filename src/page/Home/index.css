@@ -1,28 +1,16 @@
 .main {
   margin: 40px auto 0;
   display: flex;
-  background-color: white;
+  background-color: #2f2e33;
   min-width: 50vw;
   width: 80vw;
   height: 70vh;
 }
 
-.list-personagens {
-  width: 13vw;
-  min-width: 11vw;
-  overflow: auto;
-}
-
-.personagem {
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .personagem-info {
   padding: 10px 20px;
+  display: flex;
   flex: 1;
   /* width: 100%; */
-  background-color: red;
+  background-color: white;
 }
