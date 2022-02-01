@@ -11,10 +11,12 @@ export default class index extends Component {
     super()
 
     this.getCharacters = this.getCharacters.bind(this)
+    this.callback = this.callback.bind(this)
 
     this.state = {
       data: [],
       personagemInfo: {},
+      anime: true,
     }
   }
 
@@ -32,14 +34,23 @@ export default class index extends Component {
 
   handleClick = ({ target }) => {
     const { data } = this.state
-    this.setState({
-      personagemInfo: data.find(e => e.uuid === target.getAttribute('id')
-        || e.developerName === target.getAttribute('alt'))
+    this.setState({ anime: false }, () => {
+      setTimeout(() => {
+        this.setState({
+          personagemInfo: data.find(e => e.uuid === target.getAttribute('id')
+            || e.developerName === target.getAttribute('alt')),
+          anime: true,
+        })
+      }, 1)
     })
   }
 
+  callback(obj) {
+    this.setState(obj)
+  }
+
   render() {
-    const { personagemInfo, data } = this.state;
+    const { personagemInfo, data, anime } = this.state;
     return (
       <>
         <Header pageAtual='inicio' />
@@ -49,8 +60,8 @@ export default class index extends Component {
             callback={this.handleClick}
           />
           {personagemInfo.displayName && (
-            <section className={` personagem-info ${personagemInfo.developerName}`}>
-              <CharactersInfo personagemInfo={personagemInfo} />
+            <section className={`personagem-info ${personagemInfo.developerName}`}>
+              <CharactersInfo personagemInfo={personagemInfo} callback={this.callback} anime={anime} />
             </section>
           )}
         </main>
