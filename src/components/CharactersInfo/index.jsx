@@ -9,16 +9,26 @@ export default class index extends Component {
     this.handleIndexState = this.handleIndexState.bind(this)
     this.state = {
       indexState: 0,
+      animetionSkill: false
     }
   }
 
   handleIndexState({ target }) {
-    if(target.nodeName === 'IMG')
-    this.setState({ indexState: Number(target.id) })
+    if(target.nodeName === 'IMG') {
+      this.setState({animetionSkill: false}, () => {
+        setTimeout(() => {
+          this.setState({ indexState: Number(target.id), animetionSkill: true })
+        }, 1)
+      })
+    }
+  }
+
+  modal() {
+
   }
 
   render() {
-    const { indexState } = this.state
+    const { indexState, animetionSkill } = this.state
     const { personagemInfo: { abilities, developerName, displayName, background, description }, callback, anime } = this.props
     const [skil1, skil2, skil3, ultimate] = abilities || []
     return (
@@ -69,10 +79,15 @@ export default class index extends Component {
                   id='3' />
               </section>
               <section>
-                <p>{ abilities[indexState].description }</p>
+                <h3>{abilities[indexState].displayName}</h3>
+                <p 
+                  className={ animetionSkill && 'descriptionSkill'}
+                  onAnimationEnd={() => this.setState({animetionSkill: false})}
+                >{ abilities[indexState].description }</p>
               </section>
             </section>
           ) }
+          <button onClick={() => this.modal()}>Mais detalhes</button>
         </section>
       </section>
     );
