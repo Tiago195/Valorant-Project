@@ -56,14 +56,14 @@ export default class index extends Component {
         <Header pageAtual='inicio' />
         <main className='main'>
           <CharactersList
-            data={data}
-            callback={this.handleClick}
+            data={ data }
+            callback={ this.handleClick }
           />
-          {personagemInfo.displayName && (
-            <section className={`personagem-info ${personagemInfo.developerName}`}>
-              <CharactersInfo personagemInfo={personagemInfo} callback={this.callback} anime={anime} />
+          { personagemInfo.displayName && (
+            <section className={ `personagem-info ${personagemInfo.developerName}` }>
+              <CharactersInfo personagemInfo={ personagemInfo } callback={ this.callback } anime={ anime } />
             </section>
-          )}
+          ) }
         </main>
       </>
     )
