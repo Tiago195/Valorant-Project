@@ -13,6 +13,7 @@ export default class index extends Component {
   }
 
   handleIndexState({ target }) {
+    if(target.nodeName === 'IMG')
     this.setState({ indexState: Number(target.id) })
   }
 
